@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sprint</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/shared.js"></script>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <div class="logo">WOW Projects</div>
+            <div>
+                <ul class="nav__link--list">
+                    <li><a href="project_backlog.html" class="nav__link--anchor">Project backlog</a></li>
+                    <li><a href="sprint_board.html" class="nav__link--anchor-primary">Sprint Board</a></li>
+                    <li><a href="team_members.html" class="nav__link--anchor">Team Members</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div><h1 id="sprintName"></h1></div>
+
+        
+        <div><h3 id="date"></h3></div>
+
+        <div class="sprint__container">
+        
+            <div class="sprint">
+                <h1>To Do</h1>
+                <div id="toDoContent">
+                    
+                </div>
+            </div>
+        
+            <div class="sprint">
+                <h1>In Progress</h1>
+                <div id="inProgressContent">
+
+                </div>
+            </div>
+
+            
+            <div class="sprint">
+                <h1>Done</h1>
+                <div id="doneContent">
+
+                </div>
+            </div>
+
+            
+            <div class="addNewTaskButton-container" id="editSprintTasks" style="display: none">
+                
+            </div>
+        </div>
+    </section>
+    
+    <main id="modal" class="modal">
+        <article id="expanded">
+
+        </article>
+    </main>
+
+    
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close__btn" onclick="togglePopup()">&times;</div>
+            <h1 class="addSprint__title">Log Your Time</h1>
+            <div class="content__details">
+
+                
+                <p>Hours:
+                    <input id="hours" type="number" min="0" name="hours" value="0"
+                        onkeypress="return isNumber(event)">
+                </p>
+
+                
+                <p>Minutes:
+                    <input id="minutes" type="number" min="0" max="59" name="hours" value="0"
+                        onkeypress="return isNumber(event)">
+                </p>
+                <p>Date:</p>
+                <p class="Sprint__duaration">
+                    <input type="date" id="logDate">
+                </p>
+                <button class="lightPurpleBtn" onclick="logTime()">Log</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
